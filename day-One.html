@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="cssstyle.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>workout2| fitness tracker</title>
+  </head>
+  <body>
+    <section class="exercises">
+      <div class="workout-container">
+        <div class="pose">
+          <img src="gif.gif" class="gif" id="exercise-gif" />
+          <div class="workout-info">
+            <h1 id="day-title">Standard Plank</h1>
+            <h3 id="day-set">Hold for 20 seconds</h3>
+            <p id="exercise-instructions">
+              Start on your elbows and toes, keeping your body in a straight
+              line from head to heels. Engage your core and hold.
+            </p>
+
+            <p id="exercise-benefits">
+              Strengthens the core, shoulders, and back, improving posture and
+              stability.
+            </p>
+            <span id="countdown">01 : 00</span>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+      </div>
+    </section>
+    <script>
+      // Content for each day
+      const challengeDays = [
+        {
+          day: 1,
+          gif: "gif.gif",
+          Exercise: "Standard Plank",
+          Sets: "Hold for 20 seconds",
+          Time: " 0:20 Mins",
+          Instructions:
+            "Start on your elbows and toes, keeping your body in a straight line from head to heels. Engage your core and hold.",
+          Benefits:
+            "Strengthens the core, shoulders, and back, improving posture and stability.",
+        },
+        {
+          day: 2,
+          gif: "gif.gif",
+          Exercise: "Elbow Plank",
+          Sets: "Hold for 30 seconds",
+          Time: " 0:30 Mins",
+          Instructions:
+            "Similar to standart plank but rest on your elbows instead of your hands. Keep the body aligned and core tight.",
+          Benefits:
+            "Focuses on deep core muscles, improving endurance and core stability.",
+        },
+        {
+          day: 3,
+          gif: "gif.gif",
+          Exercise: "Side Plank (Left)",
+          Sets: "3 sets of 15 seconds",
+          Time: " 0:45 Mins",
+          Instructions:
+            "Lie on your left side, lift your hips, and balance on your left elbow and foot. Keep your body in a straight line.",
+          Benefits:
+            "Strengthens the obliques, shoulders, and core muscles on the side of the body.",
+        },
+        {
+          day: 4,
+          gif: "gif.gif",
+          Exercise: "Side Plank (Right)",
+          Sets: " 3 sets of 15 seconds",
+          Time: " 0:45 Mins",
+          Instructions:
+            "Lie on your right side, lift your hips, and balance on your right elbow and foot. Keep your body in a straight line.",
+          Benefits:
+            "Targets the obliques, core, and shoulder stability on the right side.",
+        },
+        {
+          day: 5,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 6,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 7,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 8,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 9,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 10,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 11,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 12,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 13,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 14,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 15,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 16,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 17,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 18,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 19,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 20,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 21,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 22,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 23,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 24,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 25,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 26,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 27,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 28,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 29,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+        {
+          day: 30,
+          gif: "gif.gif",
+          Exercise: "Plank with Leg Lift",
+          Sets: "3 sets of 10 reps (each leg)",
+          Time: " 01:00 Mins",
+          Instructions:
+            "Start in a plank position, lift one leg off the ground, hold for a second, and lower it back. Alternate legs.",
+          Benefits:
+            "Enhances core strength and stability while engaging the glutes and lower back.",
+        },
+      ];
+
+      // Get the day parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const day = parseInt(urlParams.get("day"));
+
+      // Display the appropriate content based on the day
+      const dayContent = challengeDays.find((d) => d.day === day);
+      if (dayContent) {
+        document.getElementById("day-title").textContent = dayContent.Exercise;
+        document.getElementById("exercise-gif").src = dayContent.gif;
+        document.getElementById("day-set").textContent = dayContent.Sets;
+        document.getElementById("exercise-instructions").textContent =
+          dayContent.Instructions;
+        Document.getElementById("exercise-benefits").textContent =
+          dayContent.Benefits;
+      }
+
+      // Timer functionality
+      let timer;
+      let timeRemaining = 100; //
+
+      function startTimer() {
+        if (!timer) {
+          timer = setInterval(() => {
+            if (timeRemaining > 0) {
+              timeRemaining--;
+              document.getElementById("countdown").textContent =
+                formatTime(timeRemaining);
+            } else {
+              clearInterval(timer);
+            }
+          }, 1000);
+        }
+      }
+
+      function pauseTimer() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = null;
+        timeRemaining = 1800;
+        document.getElementById("countdown").textContent =
+          formatTime(timeRemaining);
+      }
+
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${
+          remainingSeconds < 10 ? "0" : ""
+        }${remainingSeconds}`;
+      }
+    </script>
+  </body>
+</html>
