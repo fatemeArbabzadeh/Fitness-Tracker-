@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+h1,
+h2 {
+  font-family: "protest guerrilla";
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fields {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-fields {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+/* * {
+
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background-image: url(Bg);
+    
+    } */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1d1d1d;
+}
+
+body .login {
+  background-image: url(img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-inline: 4%;
+  margin-top: 3.5%;
+  margin-bottom: auto;
+  gap: 10px;
+}
+
+.box-1 {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  /* margin-left: 50px; */
+  margin-bottom: 100px;
+}
+
+.box-1 h1 {
+  font-size: 30px;
+  bottom: 20px;
+}
+/* .brand p {
+        width: 450px;
+      } */
+.box-1 button {
+  background-color: transparent;
+  border-radius: 6px;
+  height: 6vh;
+  box-sizing: border-box;
+  /* bottom:10px;
+    top: 15px; */
+  border-color: #bd08c3;
+}
+
+.box-2 {
+  width: 35%;
+  background-color: blueviolet;
+  padding: 20px;
+  margin-left: 145px;
+  background-color: transparent;
+  border: 2px solid #bd08c3;
+  position: relative;
+  animation: borderAnimation 3s infinite linear;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #bd08c3;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: #bd08c3;
+  }
+}
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; /
+    top: 20px;
+    left: 50px;
+    / transform: translate(-10%); /* the logo horizontal */
+}
+
+nav button {
+  width: 134px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  stroke: #fffbfb;
+  background-color: black;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 4%;
+}
+
+.info {
+  margin-top: 20px;
+  position: relative;
+}
+button {
+  position: absolute;
+  margin-top: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.field {
+  margin-bottom: 10px;
+  position: relative;
+}
+.field {
+  margin: 0 auto 15px;
+  width: 90%;
+}
+
+.field label {
+  text-align: center;
+  display: block;
+  font-size: 10px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1.5px solid #eeeaea;
+  border-radius: 10px;
+}
+input[type="submit"] {
+  width: 90%;
+  margin: 0 auto 15px;
+}
+
+.icon {
+  height: 50px;
+}
+
+.link a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  /* top: 10px; */
+  bottom: 15px;
+  left: 90px;
+  font-size: 12px;
+  color: rgb(181, 173, 173);
+}
+input[type="submit"] {
+  background: linear-gradient(to bottom, #bd08c3, #5904a2);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.toggle-password {
+  position: absolute;
+  right: 4px;
+  top: 35%;
+  transform: translate(-50%);
+  cursor: pointer;
+  color: rgb(181, 173, 173);
+} /* need javascript for action that toggles the visibility of the password text in my password field, */
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.dash {
+  border-top: 1px solid rgb(181, 173, 173);
+  width: 90px;
+  margin: 0 10px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons i {
+  font-size: 24px;
+  margin: 0 8px;
+}
+.create-account p {
+  font-size: 11px;
+  color: rgb(181, 173, 173);
+}
+.create-account a {
+  color: #bd08c3;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-image: url(bg\ -\ Copy.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-1,
+  .box-2 {
+    width: 90%;
+  }
+
+  .box-2 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  input[type="submit"] {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  .field label {
+    font-size: 12px;
+  }
+
+  .social-icons i {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 80%;
+  }
+
+  form {
+    max-width: 300px;
+  }
+}

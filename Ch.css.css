@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Protest+Guerrilla&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(bg.png);
+    background-position: center;
+    background-size: cover;
+    font-family: "Poppins";
+  }
+  h1{
+  font-family: "Protest Guerrilla", system-ui;
+}
+  .box-1 {
+    margin-inline: 10%;
+    margin-top: 5%;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .small-box {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    color: white;
+    border: 2px solid purple;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:30vw;
+    height: 75vh;
+     border-radius: 6px;
+    position: relative;
+    animation: borderAnimation 3s infinite linear;
+  }
+
+  @keyframes borderAnimation {
+    0% {
+        border-color: #BD08C3;
+    }
+    50% {
+        border-color: black;
+    }
+    100% {
+        border-color: #BD08C3;
+    }
+}
+  input {
+    width: 300px;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  button {
+    /* margin-top: 100px; */
+    width: 90%;
+    padding: 15px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 10px;
+  }
+  button[type="submit"] {
+    background: linear-gradient(to bottom, #BD08C3, #5904A2);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 80px;
+    }
+    input[type="text"],
+    input[type="password"]{
+    /* width: 100%; */
+    padding: 10px;
+    /* margin-top: 5px; */
+    box-sizing: border-box;
+    background-color:transparent;
+    border: 1.5px solid #EEEAEA ;
+    border-radius: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .box-1 {
+        width: 90vw;
+        margin-inline: 5%;
+      }
+      .small-box {
+        width: 80vw;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .box-1 {
+        width: 95vw;
+        margin-inline: 2.5%;
+      }
+      .small-box {
+        width: 90vw;
+      }
+    }

@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&family=Protest+Guerrilla&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(bg.png);
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    font-family: "Poppins";
+    }
+
+    .container-b {
+    display: flex;
+    }
+    .box-1 {
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    height: 50vh;
+    top: 10px;
+    }
+    
+    .box-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 20px;
+    margin-left:400px;
+    background-color:transparent;
+    border: 2px solid #BD08C3 ;
+    margin-top: 40px;
+    width: 30%;
+    position: relative;
+    animation: borderAnimation 3s infinite linear;
+    
+    }
+    @keyframes borderAnimation {
+    0% {
+    border-color: #BD08C3;
+    }
+    50% {
+    border-color: black;
+    }
+    100% {
+    border-color: #BD08C3;
+    }
+    }
+    .brand {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    /* transform: translate(-10%); /* the logo horizontal */
+    }
+    .box-1 .brand img{
+    width: 30%;
+    
+    }
+    .container-b {
+    display: flex;
+    }
+    
+    .box-1 {
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    height: 50vh;
+    top: 10px;
+    position: relative;
+    }
+    
+    .logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    
+    }
+    .field {
+    margin-bottom: 10px;
+    position: relative;
+    
+    }
+    .field {
+    /* margin: 0 auto 12px; */
+    width: 90%;
+    
+    }
+    input[type="text"],
+    input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border: 1.5px solid #EEEAEA ;
+    border-radius: 10px;
+    }
+    .field {
+    position: relative;
+    }
+    
+   button[type="submit"] {
+    width: 90%;
+    margin: 0 auto 15px;;
+    }
+    .icon {
+    height: 50px;
+    
+    }
+    button[type="submit"] {
+    background: linear-gradient(to bottom, #BD08C3, #5904A2);
+    /* color: white; */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    }
+    .toggle-password{
+    position: absolute;
+    right: 4px;
+    top: 35%;
+    transform: translate(-50%);
+    cursor: pointer;
+    color: rgb(181, 173, 173);
+    
+    } /* need javascript for action that toggles the visibility of the password text in my password field, */
+    
+    .or-divider
+    {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    
+    }
+    .dash {
+    border-top: 1px solid rgb(181, 173, 173);
+    width: 90px;
+    margin: 0 10px;
+    
+    }
+    .social-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    }
+    .social-icons {
+    display: flex;
+    justify-content: center;
+    }
+    .social-icons i {
+    font-size: 24px;
+    margin: 0 8px;
+    }
+    .create-account{
+    font-size:7px ;
+    color: rgb(181, 173, 173);
+    }
+
+    
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .box-2 {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .brand {
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
