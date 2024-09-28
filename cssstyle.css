@@ -2002,7 +2002,7 @@ body .daily-plan h3 {
     visibility: hidden;
   }
   .navbar-container {
-    margin-inline: 10px;
+    margin-inline: 5px;
     margin-top: 0;
   }
   .navbar-header {
@@ -2285,6 +2285,7 @@ body .daily-plan h3 {
   }
   .target .checkbox-wrapper-16 .checkbox-tile {
     font-size: 15px;
+    margin-left:6px;
     padding: 5px 15px 5px 10px;
   }
   .target .options {
@@ -2298,7 +2299,7 @@ body .daily-plan h3 {
     text-wrap: pretty;
   }
   .focus .options {
-    width: 400px;
+    width: 350px;
     margin-left: -3%;
     column-gap: 5px;
     display: flex;
@@ -2306,7 +2307,7 @@ body .daily-plan h3 {
     row-gap: 5px;
   }
   .focus .radio-label {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
   }
   .set-time p {
