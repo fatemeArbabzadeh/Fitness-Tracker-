@@ -37,7 +37,7 @@ h4 {
 
   .content {
     display: block;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -62,7 +62,7 @@ h4 {
   }
 
   .content {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -122,6 +122,8 @@ h6 {
 
   .header-image {
     height: 700px;
+    width: 100%;
+    
   }
 
   h2 {
@@ -148,6 +150,7 @@ h6 {
 
   .header-image {
     height: 700px;
+    width: 100%
   }
 
   h2 {
