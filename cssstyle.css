@@ -2002,7 +2002,7 @@ body .daily-plan h3 {
     visibility: hidden;
   }
   .navbar-container {
-    margin-inline: 20px;
+    margin-inline: 10px;
     margin-top: 0;
   }
   .navbar-header {
@@ -2241,11 +2241,14 @@ body .daily-plan h3 {
   .username p {
     width: 360px;
     text-wrap: pretty;
+    font-size:12px;
   }
   .username button {
-    right: -60px;
+    right: -40px;
   }
-
+.username input {
+  width:400px;
+}
   .info p {
     margin-top: -8px;
     width: 350px;
