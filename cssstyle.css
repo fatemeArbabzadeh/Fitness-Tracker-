@@ -2220,6 +2220,9 @@ body .daily-plan h3 {
     background-position: center;
     background-size: cover;
   }
+  .navbar-container{
+    margin-left:0;
+  }
   .hero {
     margin-top: 50px;
   }
@@ -2251,8 +2254,8 @@ body .daily-plan h3 {
 }
   .info p {
     margin-top: -8px;
-    width: 350px;
-    font-size: 15px;
+    width: 300px;
+    font-size: 13px;
     text-wrap: pretty;
   }
   .info .radio-label {
