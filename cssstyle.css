@@ -2286,7 +2286,10 @@ body .daily-plan h3 {
   .target .checkbox-wrapper-16 .checkbox-tile {
     font-size: 15px;
     margin-left:6px;
-    padding: 5px 15px 5px 10px;
+    padding: 5px 10px 5px 10px;
+  }
+  .checkbox-wrapper-16 .checkbox-tile:before {
+    margin-right: 5px;
   }
   .target .options {
     row-gap: 10px;
@@ -2317,9 +2320,14 @@ body .daily-plan h3 {
   .set-time h2{
     width:300px;
   }
+   .set-time input {
+    padding: 5px;
+  }
+  .set-time label {
+    font-size: 14px;
+  }
   details[open] .days-btn-container {
     background-color: #000;
-
     transform: translateY(-50px);
   }
   .eighth-page .thanku {
