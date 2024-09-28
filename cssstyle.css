@@ -2311,8 +2311,11 @@ body .daily-plan h3 {
     font-weight: 500;
   }
   .set-time p {
-    width: 390px;
-    font-size: 15px;
+    width: 300px;
+    font-size: 13px;
+  }
+  .set-time h2{
+    width:300px;
   }
   details[open] .days-btn-container {
     background-color: #000;
