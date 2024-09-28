@@ -2242,17 +2242,16 @@ body .daily-plan h3 {
     left: 0;
     bottom: -60px;
   }
-  .username p {
-    width: 360px;
-    text-wrap: pretty;
-    font-size:12px;
+.second-page .username p {
+    font-size: 14px;
+    width: 350px;
   }
-  .username button {
-    right: -40px;
+  .second-page .username input {
+    width: 300px;
   }
-.username input {
-  width:400px;
-}
+  .second-page .username button {
+      right: -40px;
+  }
   .info p {
     margin-top: -8px;
     width: 300px;
