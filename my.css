@@ -253,11 +253,11 @@ main {
 }
 
 .goal-1 h1 {
-  color: darkorchid;
+  color: purple;
 }
 
 .goal-1 h3 {
-  color: white;
+  color: purple;
   
 }
 
@@ -266,13 +266,13 @@ main {
 }
 
 .goal-1 .img-1 {
-  width: 31%;
-  height: 30%;
+  width: 51%;
+  height: 50%;
   display: flex;
 }
 
 .goal-2 h1 {
-  color: darkorchid;
+  color: purple;
   margin-left: 65%;
   
 }
@@ -286,19 +286,19 @@ main {
   color: #b1acb1;
   margin-left: 65%;
   font-family: "Poppins", serif;
-  width: 90%;
+  width: 80%;
 }
 
 .goal-2 .img-2 {
-  width: 31%;
-  height: 30%;
+  width: 51%;
+  height: 50%;
   display: flex;
   margin-left: 65%;
 }
 
 
 .goal-3 h1 {
-  color: darkorchid;
+  color: purple;
 }
 
 .goal-3 h3 {
@@ -310,8 +310,8 @@ main {
 }
 
 .goal-3 .img-3 {
-  width: 31%;
-  height: 30%;
+  width: 51%;
+  height: 50%;
   display: flex;
 }
 
