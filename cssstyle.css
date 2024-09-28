@@ -2450,6 +2450,7 @@ body .daily-plan h3 {
   }
   .daily-plan .main-container {
     left: 40px;
+    padding-left:10px;
   }
   .lable {
     left: 80px;
