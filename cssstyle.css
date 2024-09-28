@@ -108,6 +108,7 @@ select option {
 .navbar-container {
   display: flex;
   position: relative;
+  background-color: black;
   justify-content: space-between;
   margin-top: 0px;
   margin-inline: 80px;
