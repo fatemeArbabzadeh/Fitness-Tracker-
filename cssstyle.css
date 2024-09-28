@@ -2291,6 +2291,9 @@ body .daily-plan h3 {
   .checkbox-wrapper-16 .checkbox-tile:before {
     margin-right: 5px;
   }
+  .detail input::placeholder{
+    font-size:14px;
+  }
   .target .options {
     row-gap: 10px;
     width: 420px;
