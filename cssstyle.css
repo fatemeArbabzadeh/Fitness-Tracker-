@@ -2241,6 +2241,9 @@ body .daily-plan h3 {
     left: 0;
     bottom: -60px;
   }
+  .second-page .username {
+    margin-left: 7%;
+  }
 .second-page .username p {
     font-size: 14px;
     width: 350px;
