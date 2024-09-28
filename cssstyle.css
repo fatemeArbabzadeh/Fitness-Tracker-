@@ -2002,8 +2002,7 @@ body .daily-plan h3 {
     visibility: hidden;
   }
   .navbar-container {
-    margin-right: 5px;
-    margin-left:10px;
+   margin-inline:20px;
     margin-top: 0;
   }
   .navbar-header {
