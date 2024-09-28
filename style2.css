@@ -77,10 +77,11 @@ h4 {
   text-align: center;
   color: purple;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-decoration:none;
 }
 
 .header-image {
-  width: 100%;
+  width: 120%;
   height: 1200px;
   display: block;
 }
@@ -122,18 +123,18 @@ h6 {
 
   .header-image {
     height: 700px;
-    width: 100%;
+    width: 120%;
     
   }
 
   h2 {
     font-size: 24px;
-    margin-left: 20px;
+    
   }
 
   h4 {
     top: 30%;
-    left: 60%;
+    left: 50%;
     font-size: 18px; 
   }
 
@@ -150,7 +151,7 @@ h6 {
 
   .header-image {
     height: 700px;
-    width: 100%
+    width: 120%;
   }
 
   h2 {
